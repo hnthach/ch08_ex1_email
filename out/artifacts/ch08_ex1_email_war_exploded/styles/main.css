@@ -1,0 +1,137 @@
+/* Toàn bộ trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container chính */
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Hiệu ứng fade */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #6a5acd;  /* tím nhạt */
+    margin-bottom: 20px;
+}
+
+/* Đoạn mô tả */
+p {
+    text-align: center;
+    color: #555;
+    margin: 8px 0 15px;
+}
+
+/* Label + Input */
+label {
+    font-weight: 600;
+    display: block;
+    margin: 12px 0 6px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #6a5acd;
+    box-shadow: 0 0 6px rgba(106, 90, 205, 0.3);
+    outline: none;
+}
+
+/* Nút bấm */
+input[type="submit"], button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #6fa8dc;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: #3d85c6;
+}
+
+/* Phần nhấn mạnh */
+strong {
+    color: #333;
+}
+
+/* Gạch ngang */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* Thông báo lỗi */
+.error {
+    color: #e74c3c;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Rainbow text effect */
+.rainbow-text {
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    background: linear-gradient(
+            90deg,
+            #ff0000,
+            #ff7f00,
+            #ffff00,
+            #00ff00,
+            #0000ff,
+            #4b0082,
+            #8f00ff
+    );
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-move 4s linear infinite;
+}
+
+/* Chạy gradient từ trái sang phải */
+@keyframes rainbow-move {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
